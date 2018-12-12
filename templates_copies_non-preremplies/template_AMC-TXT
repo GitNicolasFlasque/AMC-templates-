@@ -1,0 +1,44 @@
+# source au format AMC-TXT
+
+# options de mise en page
+#########################
+LaTeX-Preambule: \usepackage{amsmath}
+LaTeX-Preambule: \usepackage{amssymb}
+Papersize: A4
+Lang: FR
+BoxColor: black
+
+SeparateAnswerSheet: 1
+LaTeX-BeginDocument: \makeatletter\AMC@outside@boxtrue\makeatother
+L-Name: Nom - Prénom  -  n° étudiant
+NameFieldLines: 3
+
+# pour codage de l'identifiant étudiant sur la copie
+Code: 8
+
+
+# informations de présentation du questionnaire
+################################################
+
+L-Student: Veuillez vérifier votre numéro étudiant Efrei dans la grille de gauche, ainsi que votre nom et votre prénom ci-dessous
+
+
+Title: 
+
+Presentation:
+Ne répondez pas directement sur le sujet. Utilisez la [*FICHE DE REPONSE*] en dernière page pour reporter vos réponses.
+
+AnswerSheetTitle:
+[*FICHE DE REPONSE*]
+
+Les réponses doivent être fournies uniquement sur cette feuille.
+
+
+# options du questionnaire
+##########################
+
+ShuffleQuestions: 1	# melange des questions
+CompleteMulti: 0	# pas de reponse par défaut
+
+
+

@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{xltxtra}
+\usepackage[bloc,separateanswersheet,outsidebox,lang=FR]{automultiplechoice}
+\usepackage{multicol}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{csvsimple}
+
+\setmainfont{Linux Libertine O}
+\geometry{paper=a4paper}
+
+\begin{document}
+\def\AMCmakeTitle#1{\par\noindent\hrule\vspace{1ex}{\hspace*{\fill}\Large\bf #1\hspace*{\fill}}\vspace{1ex}\par\noindent\hrule\par\vspace{1ex}}
+\AMCrandomseed{1527384}
+\definecolor{amcboxcolor}{named}{black}
+\AMCboxColor{amcboxcolor}
+
+%%% insertion du document contenant les questions
+
+%\input{questions.tex}
+
+%%% directives de constitution des copies
+
+\newcommand{\sujet}
+{
+	\onecopy{1}
+	{
+		\noindent{\bf TITRE DU QUESTIONNAIRE}
+		\vspace
+		*{.5cm}
+		\hfill \champnom
+		{
+			\fbox
+			{
+				\begin{minipage}
+				{
+					.5\linewidth
+				} 
+				\prenom{} \newline \nom{} \newline \id{} \vspace
+				*{1mm}
+				\end{minipage}
+			}
+		}
+
+		\begin{center}\em
+		Ne répondez pas directement sur le sujet. Utilisez la {\bf FICHE DE REPONSE} en dernière page pour reporter vos réponses.
+		\end{center}
+
+		\noindent\hrulefill
+		\vspace{1ex}
+
+		\melangegroupe{general}
+		\restituegroupe{general}
+		\clearpage
+
+		\AMCdebutFormulaire
+		{
+			{\large\bf\ FICHE DE REPONSE :}
+			\newline
+			Les réponses doivent être fournies uniquement sur cette feuille
+		}
+		\formulaire
+		\AMCassociation{\id}
+	}
+}
+
+\csvreader[head to column names]{liste.csv}{}{\sujet}
+
+  
+
+\end{document}
